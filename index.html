@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VR Reservatórios</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <img src="logo3.png" alt="VR Reservatórios" class="logo" />
+        <nav>
+          <a href="#hero">Início</a>
+          <a href="#about">Sobre</a>
+          <a href="#services">Serviços</a>
+          <a href="#cta" class="btn">Solicitar orçamento</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <h1>Limpeza de reservatórios com segurança e qualidade</h1>
+        <p>Atendimento rápido para residências e empresas</p>
+        <div class="buttons">
+          <a href="#cta" class="btn">Solicitar orçamento</a>
+          <a href="#" class="btn whatsapp">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2>Sobre a VR Reservatórios</h2>
+        <p>
+          A VR Reservatórios oferece serviços de limpeza e manutenção de
+          reservatórios com qualidade e segurança. Nossa equipe é treinada para
+          realizar todo o processo de higienização e manutenção, garantindo
+          tranquilidade para residências e empresas.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2>Nossos Serviços</h2>
+        <div class="grid">
+          <div class="card">
+            <img
+              src="https://picsum.photos/300/200?random=1"
+              alt="Limpeza de caixas"
+            />
+            <h3>Limpeza de caixas</h3>
+            <p>Remoção completa de sujeiras</p>
+          </div>
+          <div class="card">
+            <img
+              src="https://picsum.photos/300/200?random=2"
+              alt="Higienização"
+            />
+            <h3>Higienização</h3>
+            <p>Processo completo de limpeza</p>
+          </div>
+          <div class="card">
+            <img
+              src="https://picsum.photos/300/200?random=3"
+              alt="Manutenção"
+            />
+            <h3>Manutenção</h3>
+            <p>Correção e prevenção de problemas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE ORÇAMENTO -->
+    <section id="cta" class="cta">
+      <div class="container">
+        <h2>Solicite seu Orçamento</h2>
+        <form class="cta-form" id="form-orcamento">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <input
+            type="tel"
+            name="telefone"
+            placeholder="Seu telefone"
+            required
+          />
+          <textarea
+            name="mensagem"
+            placeholder="Detalhes do serviço"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit" class="btn cta-whatsapp">
+            Enviar Orçamento
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SCRIPT EMAILJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init("lNcUdpxVcjJSyN3Yp"); // Substitua pelo seu User ID do EmailJS
+
+      const form = document.getElementById("form-orcamento");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita reload da página
+        emailjs.sendForm("service_8m346vv", "template_b4421ep", this).then(
+          () => {
+            alert("Orçamento enviado com sucesso!");
+            form.reset();
+          },
+          (err) => {
+            alert("Erro ao enviar: " + JSON.stringify(err));
+          },
+        );
+      });
+    </script>
+
+    <!-- CONTATO -->
+    <section class="contact">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>(11) 9XXXX-XXXX</p>
+        <p>Atendimento na região</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 VR Reservatórios</p>
+    </footer>
+
+    <!-- SCRIPT PARA TRANSPARÊNCIA DO HEADER -->
+    <script>
+      const header = document.querySelector("header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
