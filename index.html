@@ -14,7 +14,7 @@
     <!-- HEADER -->
     <header>
       <div class="container">
-        <img src="logo3.png" alt="VR Reservatórios" class="logo" />
+        <img src="logo4.png" alt="VR Reservatórios" class="logo" />
         <nav>
           <a href="#hero">Início</a>
           <a href="#about">Sobre</a>
@@ -31,7 +31,13 @@
         <p>Atendimento rápido para residências e empresas</p>
         <div class="buttons">
           <a href="#cta" class="btn">Solicitar orçamento</a>
-          <a href="#" class="btn whatsapp">WhatsApp</a>
+          <a
+            href="https://wa.me/5519989634844?text=Olá,%20gostaria%20de%20um%20orçamento"
+            class="btn whatsapp"
+            target="_blank"
+          >
+            WhatsApp
+          </a>
         </div>
       </div>
     </section>
@@ -55,10 +61,7 @@
         <h2>Nossos Serviços</h2>
         <div class="grid">
           <div class="card">
-            <img
-              src="https://picsum.photos/300/200?random=1"
-              alt="Limpeza de caixas"
-            />
+            <img src="https://picsum.photos/300/200?random=1" alt="Limpeza" />
             <h3>Limpeza de caixas</h3>
             <p>Remoção completa de sujeiras</p>
           </div>
@@ -82,7 +85,7 @@
       </div>
     </section>
 
-    <!-- FORMULÁRIO DE ORÇAMENTO -->
+    <!-- FORMULÁRIO -->
     <section id="cta" class="cta">
       <div class="container">
         <h2>Solicite seu Orçamento</h2>
@@ -108,14 +111,36 @@
       </div>
     </section>
 
-    <!-- SCRIPT EMAILJS -->
+    <!-- CONTATO -->
+    <section class="contact">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>(19) 98963-4844</p>
+        <p>📍 Indaiatuba - SP</p>
+
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1311.5102533042532!2d-47.19445461073613!3d-23.07616193841467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b4c7732de5db%3A0x139e822c26bdd3e8!2sR.%20Jo%C3%A3o%20Ifanger%20J%C3%BAnior%2C%20138%20-%20Jardim%20Itamaraca%2C%20Indaiatuba%20-%20SP%2C%2013335-640!5e1!3m2!1spt-BR!2sbr!4v1775039505717!5m2!1spt-BR!2sbr"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 VR Reservatórios</p>
+    </footer>
+
+    <!-- EMAILJS -->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-      emailjs.init("lNcUdpxVcjJSyN3Yp"); // Substitua pelo seu User ID do EmailJS
+      emailjs.init("lNcUdpxVcjJSyN3Yp");
 
       const form = document.getElementById("form-orcamento");
       form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita reload da página
+        event.preventDefault();
         emailjs.sendForm("service_8m346vv", "template_b4421ep", this).then(
           () => {
             alert("Orçamento enviado com sucesso!");
@@ -128,21 +153,7 @@
       });
     </script>
 
-    <!-- CONTATO -->
-    <section class="contact">
-      <div class="container">
-        <h2>Contato</h2>
-        <p>(11) 9XXXX-XXXX</p>
-        <p>Atendimento na região</p>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2026 VR Reservatórios</p>
-    </footer>
-
-    <!-- SCRIPT PARA TRANSPARÊNCIA DO HEADER -->
+    <!-- HEADER TRANSPARENTE -->
     <script>
       const header = document.querySelector("header");
 
@@ -153,6 +164,26 @@
           header.classList.remove("scrolled");
         }
       });
+    </script>
+
+    <!-- ANIMAÇÃO DOS CARDS -->
+    <script>
+      const cards = document.querySelectorAll(".card");
+
+      function showCards() {
+        const triggerBottom = window.innerHeight * 0.85;
+
+        cards.forEach((card) => {
+          const cardTop = card.getBoundingClientRect().top;
+
+          if (cardTop < triggerBottom) {
+            card.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", showCards);
+      window.addEventListener("load", showCards);
     </script>
   </body>
 </html>
