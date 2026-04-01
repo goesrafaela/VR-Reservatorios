@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VR Reservatórios</title>
+
+    <!-- FAVICON (na raiz) -->
+    <link rel="icon" type="img/x-icon" href="favicon.ico" />
+
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <!-- HEADER -->
     <header>
@@ -61,23 +66,19 @@
         <h2>Nossos Serviços</h2>
         <div class="grid">
           <div class="card">
-            <img src="https://picsum.photos/300/200?random=1" alt="Limpeza" />
+            <img src="limpeza.jpeg" alt="Limpeza de caixas" />
             <h3>Limpeza de caixas</h3>
             <p>Remoção completa de sujeiras</p>
           </div>
+
           <div class="card">
-            <img
-              src="https://picsum.photos/300/200?random=2"
-              alt="Higienização"
-            />
+            <img src="higienizacao.jpg" alt="Higienização" />
             <h3>Higienização</h3>
             <p>Processo completo de limpeza</p>
           </div>
+
           <div class="card">
-            <img
-              src="https://picsum.photos/300/200?random=3"
-              alt="Manutenção"
-            />
+            <img src="manutencao.jpeg" alt="Manutenção" />
             <h3>Manutenção</h3>
             <p>Correção e prevenção de problemas</p>
           </div>
@@ -121,8 +122,9 @@
         <div class="map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1311.5102533042532!2d-47.19445461073613!3d-23.07616193841467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b4c7732de5db%3A0x139e822c26bdd3e8!2sR.%20Jo%C3%A3o%20Ifanger%20J%C3%BAnior%2C%20138%20-%20Jardim%20Itamaraca%2C%20Indaiatuba%20-%20SP%2C%2013335-640!5e1!3m2!1spt-BR!2sbr!4v1775039505717!5m2!1spt-BR!2sbr"
-            allowfullscreen=""
+            allowfullscreen
             loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
@@ -141,6 +143,7 @@
       const form = document.getElementById("form-orcamento");
       form.addEventListener("submit", function (event) {
         event.preventDefault();
+
         emailjs.sendForm("service_8m346vv", "template_b4421ep", this).then(
           () => {
             alert("Orçamento enviado com sucesso!");
