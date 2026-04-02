@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <title>VR Reservatórios</title>
 
     <!-- FAVICON (na raiz) -->
@@ -18,11 +22,18 @@
     <!-- HEADER -->
     <header>
       <div class="container">
-        <img src="logo4.png" alt="VR Reservatórios" class="logo" />
+        <div class="logo-container">
+          <img src="logo6.png" alt="VR Reservatórios" class="logo-icon" />
+          <div class="logo-text">
+            <span class="vr">VR</span>
+            <span class="reservatorios">Reservatórios</span>
+          </div>
+        </div>
         <nav>
           <a href="#hero">Início</a>
           <a href="#about">Sobre</a>
           <a href="#services">Serviços</a>
+          <a href="#jobs">Nossos Trabalhos</a>
           <a href="#cta" class="btn">Solicitar orçamento</a>
         </nav>
       </div>
@@ -80,6 +91,35 @@
             <img src="manutencao.jpeg" alt="Manutenção" />
             <h3>Manutenção</h3>
             <p>Correção e prevenção de problemas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- TRABALHOS REALIZADOS-->
+    <section class="videos" id="jobs">
+      <div class="container">
+        <h2>Trabalhos Realizados</h2>
+
+        <div class="video-grid">
+          <div class="video-item">
+            <video autoplay muted loop playsinline>
+              <source src="hidrojateamento.mp4" type="video/mp4" />
+            </video>
+            <p>Hidrojateamento</p>
+          </div>
+
+          <div class="video-item">
+            <video autoplay muted loop playsinline>
+              <source src="jateamentointerno.mp4" type="video/mp4" />
+            </video>
+            <p>Jateamento Interno</p>
+          </div>
+
+          <div class="video-item">
+            <video autoplay muted loop playsinline>
+              <source src="lixamento.mp4" type="video/mp4" />
+            </video>
+            <p>Lixamento</p>
           </div>
         </div>
       </div>
