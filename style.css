@@ -367,10 +367,20 @@ footer {
   display: none;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* RESPONSIVO */
 @media (max-width: 768px) {
   body {
     padding-top: 130px;
+  }
+
+  .container {
+    width: 95%;
   }
 
   .menu-toggle {
