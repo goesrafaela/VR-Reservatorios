@@ -372,28 +372,59 @@ footer {
   transition-delay: 0.5s;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 /* RESPONSIVO */
 @media (max-width: 768px) {
   body {
     padding-top: 130px;
   }
 
-  header .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
   }
 
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* BOTÃO HAMBURGUER */
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #0a2a66;
+  }
+
+  /* MENU ESCONDIDO */
   nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* QUANDO ABRIR */
+  nav.active {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   nav a {
-    margin: 5px;
+    margin: 10px 0;
     font-size: 14px;
+    display: block;
   }
 
   .hero {
