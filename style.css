@@ -374,32 +374,46 @@ footer {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-img {
-    border-right: none;
-    padding-right: 0;
-  }
-
-  .about-img img {
-    width: 280px;
-  }
-  .grid {
-    grid-template-columns: 1fr;
+  body {
+    padding-top: 130px;
   }
 
   header .container {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
   }
 
   .buttons {
     flex-direction: column;
   }
 
-  .video-grid {
-    grid-template-columns: 1fr;
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .video-grid video {
+    height: 200px;
   }
 }
