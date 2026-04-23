@@ -383,6 +383,12 @@ body {
     width: 95%;
   }
 
+  .card img {
+    height: auto;
+    max-height: 220px; /* limita pra não ficar gigante */
+    object-fit: contain; /* mostra a imagem inteira */
+  }
+
   .menu-toggle {
     display: block;
     font-size: 28px;
