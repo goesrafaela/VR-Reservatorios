@@ -100,26 +100,38 @@ header .container {
   text-align: center;
 }
 
-.instagram-btn {
+/* ===== ÍCONES DO HEADER (INSTAGRAM + FACEBOOK) ===== */
+
+nav .instagram,
+nav .facebook-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: #e1306c;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
   text-decoration: none;
-  font-weight: 500;
+  color: white;
+  font-size: 16px;
+  margin-left: 10px;
   transition: 0.3s;
 }
 
-.instagram-btn i {
-  font-size: 20px;
+/* Instagram */
+nav .instagram {
+  background: #e1306c;
 }
 
-.instagram-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+/* Facebook */
+nav .facebook-btn {
+  background: #1877f2;
+  padding: 0; /* remove o padding grande do botão */
+}
+
+/* Hover */
+nav .instagram:hover,
+nav .facebook-btn:hover {
+  transform: scale(1.1);
 }
 
 .logo {
