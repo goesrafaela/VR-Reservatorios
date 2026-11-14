@@ -1,18 +1,18 @@
-
 /* =========================================
-   CONFIGURAÇÕES GERAIS
+   VR RESERVATÓRIOS - ESTILO ATUALIZADO
 ========================================= */
 
 :root {
   --azul-escuro: #062653;
   --azul: #0863b5;
+  --azul-vivo: #0788cf;
   --azul-claro: #eaf5ff;
   --verde: #159b35;
   --verde-hover: #087b27;
   --texto: #26364b;
   --branco: #ffffff;
   --borda: #dceaf5;
-  --sombra: 0 5px 20px rgba(6, 38, 83, 0.08);
+  --sombra: 0 8px 26px rgba(6, 38, 83, 0.10);
 }
 
 * {
@@ -23,16 +23,14 @@
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-padding-top: 100px;
-}
+html { scroll-padding-top: 100px; }
 
 body {
   color: var(--texto);
   background: #fff;
   overflow-x: hidden;
-  padding-top: 85px;
-  line-height: 1.6;
+  padding-top: 88px;
+  line-height: 1.65;
 }
 
 .container {
@@ -47,21 +45,18 @@ img {
 }
 
 section {
-  padding: 65px 0;
+  padding: 70px 0;
 }
 
 section h2 {
   color: var(--azul-escuro);
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 25px;
 }
 
-
-/* =========================================
-   CABEÇALHO
-========================================= */
+/* CABEÇALHO */
 
 header {
   position: fixed;
@@ -71,26 +66,23 @@ header {
   z-index: 1000;
   padding: 5px 0;
   background: var(--azul-escuro);
-  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-  transition: 0.3s;
+  box-shadow: 0 3px 16px rgba(0,0,0,.14);
+  transition: background .3s, box-shadow .3s;
 }
 
 header.scrolled {
-  background: rgba(6, 38, 83, 0.97);
+  background: rgba(6,38,83,.98);
+  box-shadow: 0 5px 20px rgba(0,0,0,.2);
 }
 
 header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 70px;
+  min-height: 74px;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
+.logo-container,
 .logo-container a {
   display: flex;
   align-items: center;
@@ -98,7 +90,7 @@ header .container {
 
 .logo-crop {
   width: 210px;
-  height: 78px;
+  height: 76px;
   object-fit: contain;
   object-position: left center;
 }
@@ -106,15 +98,15 @@ header .container {
 nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 18px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: .84rem;
   font-weight: 500;
-  transition: 0.3s;
+  transition: .25s;
 }
 
 nav a:hover {
@@ -123,7 +115,7 @@ nav a:hover {
 
 nav .btn {
   background: var(--verde);
-  padding: 10px 17px;
+  padding: 10px 15px;
   border-radius: 8px;
 }
 
@@ -135,8 +127,8 @@ nav .facebook-btn {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  margin: 0;
   color: white;
+  flex: 0 0 34px;
 }
 
 nav .instagram {
@@ -150,16 +142,13 @@ nav .facebook-btn {
 .menu-toggle {
   display: none;
   background: transparent;
-  border: none;
+  border: 0;
   color: white;
   font-size: 27px;
   cursor: pointer;
 }
 
-
-/* =========================================
-   BOTÕES
-========================================= */
+/* BOTÕES */
 
 .btn {
   display: inline-flex;
@@ -168,20 +157,20 @@ nav .facebook-btn {
   gap: 9px;
   background: var(--azul-escuro);
   color: white;
-  padding: 13px 23px;
+  padding: 14px 23px;
   border-radius: 9px;
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border: none;
+  font-size: .95rem;
+  font-weight: 700;
+  border: 0;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform .25s, box-shadow .25s, background .25s;
   line-height: 1.4;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.17);
 }
 
 .btn.whatsapp {
@@ -193,20 +182,18 @@ nav .facebook-btn {
   background: var(--verde-hover);
 }
 
-
-/* =========================================
-   BANNER PRINCIPAL
-========================================= */
+/* BANNER */
 
 .hero {
-  min-height: 430px;
+  min-height: 490px;
   display: flex;
   align-items: center;
   background:
-    linear-gradient(110deg, rgba(5, 43, 94, 0.96), rgba(20, 117, 205, 0.76)),
+    linear-gradient(110deg, rgba(5,35,78,.96), rgba(8,99,181,.78)),
     url("img/reservatorio-banner.jpg") center/cover no-repeat;
   color: white;
-  padding: 75px 0;
+  padding: 85px 0;
+  position: relative;
 }
 
 .hero .container {
@@ -214,26 +201,33 @@ nav .facebook-btn {
 }
 
 .hero-subtitle {
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  display: inline-block;
+  font-size: .88rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
   margin-bottom: 18px;
   color: #d5efff;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 30px;
+  padding: 8px 14px;
 }
 
 .hero h1 {
-  max-width: 650px;
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  line-height: 1.12;
+  max-width: 700px;
+  font-size: clamp(2.3rem, 5vw, 3.65rem);
+  line-height: 1.1;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  text-shadow: 0 3px 15px rgba(0,0,0,.15);
 }
 
 .hero p:not(.hero-subtitle) {
-  max-width: 600px;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 27px;
+  max-width: 620px;
+  font-size: 1.04rem;
+  line-height: 1.85;
+  margin-bottom: 28px;
+  color: #f0f8ff;
 }
 
 .buttons {
@@ -243,13 +237,10 @@ nav .facebook-btn {
 }
 
 .hero .btn {
-  min-width: 245px;
+  min-width: 260px;
 }
 
-
-/* =========================================
-   SOBRE A EMPRESA
-========================================= */
+/* SOBRE */
 
 .about {
   background: #fff;
@@ -257,7 +248,7 @@ nav .facebook-btn {
 
 .about-content {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: .8fr 1.2fr;
   align-items: center;
   gap: 45px;
 }
@@ -281,18 +272,15 @@ nav .facebook-btn {
 }
 
 .about-text p {
-  font-size: 0.98rem;
+  font-size: .98rem;
   line-height: 1.9;
   margin-bottom: 13px;
 }
 
-
-/* =========================================
-   SERVIÇOS
-========================================= */
+/* SERVIÇOS */
 
 .services {
-  background: #f5f9fd;
+  background: #f3f8fd;
 }
 
 .services h2,
@@ -300,7 +288,7 @@ nav .facebook-btn {
 .videos h2,
 .service-process h2 {
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 14px;
 }
 
 .services h2::after,
@@ -311,7 +299,7 @@ nav .facebook-btn {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 65px;
+  width: 72px;
   height: 4px;
   border-radius: 5px;
   background: var(--verde);
@@ -319,20 +307,20 @@ nav .facebook-btn {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  margin-top: 30px;
+  grid-template-columns: repeat(2,1fr);
+  gap: 24px;
+  margin-top: 32px;
 }
 
 .card {
   background: white;
   border: 1px solid var(--borda);
-  border-radius: 15px;
+  border-radius: 16px;
   padding: 20px;
   box-shadow: var(--sombra);
   opacity: 0;
   transform: translateY(20px);
-  transition: 0.5s;
+  transition: .5s;
 }
 
 .card.show {
@@ -342,10 +330,10 @@ nav .facebook-btn {
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 195px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 16px;
+  border-radius: 11px;
+  margin-bottom: 17px;
 }
 
 .card h3 {
@@ -361,23 +349,102 @@ nav .facebook-btn {
 }
 
 .card p {
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: .9rem;
+  line-height: 1.75;
   margin-bottom: 12px;
 }
 
 .card p:last-child {
   background: #f0f8ef;
   border-left: 3px solid var(--verde);
-  padding: 10px;
+  padding: 11px;
   border-radius: 5px;
   margin-bottom: 0;
 }
 
+/* DESTAQUE DA LIMPEZA - NOVA SEÇÃO */
 
-/* =========================================
-   REPAROS
-========================================= */
+.limpeza-destaque {
+  padding: 82px 0;
+  background: linear-gradient(135deg, #062653 0%, #084f91 58%, #087dbb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.limpeza-layout {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: clamp(30px, 5vw, 65px);
+}
+
+.limpeza-foto {
+  position: relative;
+}
+
+.limpeza-foto img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center 48%;
+  border-radius: 20px;
+  border: 5px solid rgba(255,255,255,.92);
+  box-shadow: 0 18px 45px rgba(0,0,0,.28);
+}
+
+.foto-legenda {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  background: rgba(6,38,83,.9);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.foto-legenda i {
+  color: #76d4ff;
+  margin-right: 6px;
+}
+
+.limpeza-texto {
+  color: white;
+}
+
+.limpeza-selo {
+  display: inline-block;
+  color: #d9f2ff;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.1);
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 17px;
+}
+
+.limpeza-texto h2 {
+  color: white;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.13;
+  margin-bottom: 20px;
+}
+
+.limpeza-texto p {
+  color: #eaf6ff;
+  font-size: .98rem;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.limpeza-texto .btn {
+  margin-top: 10px;
+}
+
+/* REPAROS */
 
 .repair {
   background: white;
@@ -391,7 +458,7 @@ nav .facebook-btn {
 
 .repair-description {
   margin-bottom: 28px;
-  font-size: 0.95rem;
+  font-size: .95rem;
 }
 
 .repair-content {
@@ -416,7 +483,7 @@ nav .facebook-btn {
 }
 
 .repair-text p {
-  font-size: 0.93rem;
+  font-size: .93rem;
   line-height: 1.8;
   margin-bottom: 15px;
 }
@@ -432,10 +499,7 @@ nav .facebook-btn {
   margin-top: 30px;
 }
 
-
-/* =========================================
-   PREVENÇÃO
-========================================= */
+/* PREVENÇÃO */
 
 .prevention {
   background: #f7faff;
@@ -443,7 +507,7 @@ nav .facebook-btn {
 
 .prevention-content {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: .9fr 1.1fr;
   gap: 35px;
   align-items: center;
 }
@@ -471,7 +535,7 @@ nav .facebook-btn {
 
 .prevention-text li {
   margin-bottom: 12px;
-  font-size: 0.95rem;
+  font-size: .95rem;
   font-weight: 600;
 }
 
@@ -480,13 +544,11 @@ nav .facebook-btn {
   margin-right: 10px;
 }
 
-
-/* =========================================
-   INFORMAÇÃO SOBRE LIMPEZA
-========================================= */
+/* INFORMAÇÃO SOBRE LIMPEZA */
 
 .cleaning-info {
-  padding: 30px 0;
+  padding: 35px 0;
+  background: #fff;
 }
 
 .cleaning-content {
@@ -494,8 +556,10 @@ nav .facebook-btn {
   align-items: center;
   gap: 25px;
   background: linear-gradient(110deg, #dcefff, #eef8ff);
+  border: 1px solid #d6eafa;
   border-radius: 16px;
-  padding: 25px 30px;
+  padding: 28px 32px;
+  box-shadow: var(--sombra);
 }
 
 .cleaning-icon {
@@ -511,7 +575,7 @@ nav .facebook-btn {
 }
 
 .cleaning-content p {
-  font-size: 0.92rem;
+  font-size: .92rem;
   margin-bottom: 8px;
 }
 
@@ -521,36 +585,33 @@ nav .facebook-btn {
 
 .cleaning-content small {
   display: block;
-  font-size: 0.8rem;
+  font-size: .8rem;
 }
 
-
-/* =========================================
-   SERVIÇOS COMPLEMENTARES
-========================================= */
+/* COMPLEMENTARES */
 
 .extra-services {
-  padding: 45px 0;
+  padding: 55px 0;
   background: white;
 }
 
 .extra-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4,1fr);
   gap: 15px;
 }
 
 .extra-item {
   border: 1px solid var(--borda);
   background: #fff;
-  padding: 22px 12px;
+  padding: 24px 12px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 10px;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .extra-item:hover {
@@ -564,18 +625,15 @@ nav .facebook-btn {
 }
 
 .extra-item h3 {
-  font-size: 0.88rem;
+  font-size: .88rem;
   color: var(--azul-escuro);
 }
 
-
-/* =========================================
-   VÍDEOS
-========================================= */
+/* VÍDEOS */
 
 .videos {
   background: #f5f9fd;
-  padding: 65px 0;
+  padding: 70px 0;
 }
 
 .videos > .container > p {
@@ -584,7 +642,7 @@ nav .facebook-btn {
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 22px;
   margin-top: 30px;
 }
@@ -609,15 +667,12 @@ nav .facebook-btn {
 
 .video-item p {
   margin: 12px 0 5px;
-  font-size: 0.95rem;
+  font-size: .95rem;
   font-weight: 600;
   color: var(--azul-escuro);
 }
 
-
-/* =========================================
-   ETAPAS DO ATENDIMENTO
-========================================= */
+/* PROCESSO */
 
 .service-process {
   background: white;
@@ -625,12 +680,11 @@ nav .facebook-btn {
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
 }
 
 .process-item {
-  position: relative;
   padding: 25px 20px;
   border: 1px solid var(--borda);
   background: #f8fbff;
@@ -658,7 +712,7 @@ nav .facebook-btn {
 }
 
 .process-item p {
-  font-size: 0.88rem;
+  font-size: .88rem;
   line-height: 1.7;
 }
 
@@ -668,10 +722,7 @@ nav .facebook-btn {
   margin-top: 30px;
 }
 
-
-/* =========================================
-   FORMULÁRIO
-========================================= */
+/* FORMULÁRIO */
 
 .cta {
   background: linear-gradient(135deg, #062653, #075da8);
@@ -707,7 +758,7 @@ nav .facebook-btn {
   padding: 14px;
   border-radius: 8px;
   border: 1px solid #d9e4ef;
-  font-size: 0.95rem;
+  font-size: .95rem;
   outline: none;
   color: var(--texto);
 }
@@ -715,6 +766,7 @@ nav .facebook-btn {
 .cta-form input:focus,
 .cta-form textarea:focus {
   border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(8,99,181,.1);
 }
 
 .cta-form textarea {
@@ -738,23 +790,20 @@ nav .facebook-btn {
 }
 
 .cta-form button:disabled {
-  opacity: 0.7;
+  opacity: .7;
   cursor: wait;
 }
 
-
-/* =========================================
-   CONTATO
-========================================= */
+/* CONTATO */
 
 .contact {
-  padding: 60px 0;
+  padding: 65px 0;
   text-align: center;
 }
 
 .contact p {
   margin: 12px 0;
-  font-size: 0.94rem;
+  font-size: .94rem;
 }
 
 .contact p i {
@@ -781,15 +830,12 @@ nav .facebook-btn {
   border: 0;
 }
 
-
-/* =========================================
-   RODAPÉ
-========================================= */
+/* RODAPÉ */
 
 footer {
   background: var(--azul-escuro);
   color: white;
-  padding: 35px 0;
+  padding: 38px 0;
   text-align: center;
 }
 
@@ -800,7 +846,7 @@ footer h2 {
 }
 
 footer p {
-  font-size: 0.85rem;
+  font-size: .85rem;
   margin: 8px 0;
 }
 
@@ -809,70 +855,17 @@ footer a {
   text-decoration: none;
 }
 
+/* TABLETS E CELULARES */
 
-/* =========================================
-   TABLETS
-========================================= */
-
-@media (max-width: 900px) {
-
-  nav {
-    gap: 12px;
-  }
-
-  nav a {
-    font-size: 0.78rem;
-  }
-
-  .about-content {
-    gap: 25px;
-  }
-
-  .extra-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .video-grid video {
-    height: 190px;
-  }
-
-}
-
-
-/* =========================================
-   CELULARES
-========================================= */
-
-@media (max-width: 768px) {
-
-  body {
-    padding-top: 75px;
-  }
-
-  section {
-    padding: 45px 0;
-  }
-
-  .container {
-    width: 92%;
-  }
-
-  section h2 {
-    font-size: 1.55rem;
-  }
-
-  /* HEADER */
-
+@media (max-width: 1000px) {
   header .container {
-    min-height: 62px;
+    min-height: 68px;
   }
 
- .logo-crop {
-  width: 220px;
-  height: 85px;
-  object-fit: contain;
-  object-position: left center;
-}
+  .logo-crop {
+    width: 175px;
+    height: 65px;
+  }
 
   .menu-toggle {
     display: block;
@@ -887,8 +880,10 @@ footer a {
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 17px;
+    gap: 16px;
     padding: 22px 15px;
+    max-height: calc(100vh - 75px);
+    overflow-y: auto;
   }
 
   nav.active {
@@ -896,29 +891,73 @@ footer a {
   }
 
   nav a {
-    font-size: 0.95rem;
-    margin: 0;
+    font-size: .95rem;
   }
 
   nav .btn {
-    width: auto;
     min-width: 190px;
+    text-align: center;
   }
 
-  /* HERO */
+  .about-content {
+    gap: 25px;
+  }
+
+  .extra-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .limpeza-layout {
+    gap: 30px;
+  }
+
+  .limpeza-foto img {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 74px;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  header .container {
+    min-height: 64px;
+  }
+
+  .logo-crop {
+    width: 170px;
+    height: 62px;
+  }
+
+  .menu-toggle {
+    font-size: 26px;
+  }
 
   .hero {
-    min-height: 380px;
-    padding: 55px 0;
+    min-height: 390px;
+    padding: 58px 0;
     background-position: center;
   }
 
   .hero h1 {
-    font-size: 2.1rem;
+    font-size: clamp(2rem, 8vw, 2.55rem);
   }
 
   .hero p:not(.hero-subtitle) {
-    font-size: 0.93rem;
+    font-size: .94rem;
   }
 
   .buttons {
@@ -932,8 +971,6 @@ footer a {
     max-width: 100%;
   }
 
-  /* SOBRE */
-
   .about-content {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -946,10 +983,8 @@ footer a {
   }
 
   .about-text p {
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
-
-  /* SERVIÇOS */
 
   .grid {
     grid-template-columns: 1fr;
@@ -961,33 +996,41 @@ footer a {
   }
 
   .card img {
-    height: 175px;
+    height: 190px;
   }
 
-  /* REPAROS */
+  .limpeza-destaque {
+    padding: 55px 0;
+  }
 
-  .repair-content {
+  .limpeza-layout {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 28px;
+  }
+
+  .limpeza-foto img {
+    height: min(115vw, 470px);
+    object-position: center 48%;
+  }
+
+  .limpeza-texto h2 {
+    font-size: 2rem;
+  }
+
+  .repair-content,
+  .prevention-content {
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
 
   .repair-image img {
     height: 230px;
   }
 
-  /* PREVENÇÃO */
-
-  .prevention-content {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
   .prevention-image img {
     height: 220px;
     max-width: 100%;
   }
-
-  /* LIMPEZA */
 
   .cleaning-content {
     padding: 20px;
@@ -1004,10 +1047,8 @@ footer a {
     font-size: 1.2rem;
   }
 
-  /* SERVIÇOS COMPLEMENTARES */
-
   .extra-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 12px;
   }
 
@@ -1015,51 +1056,41 @@ footer a {
     padding: 18px 8px;
   }
 
-  /* VÍDEOS */
-
   .video-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
   .video-grid video {
-    height: 220px;
+    height: 230px;
   }
-
-  /* PROCESSO */
 
   .process-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
 
-  /* FORMULÁRIO */
-
   .cta-form {
     padding: 18px;
   }
 
-  /* CONTATO */
-
   .map iframe {
     height: 260px;
   }
-
 }
 
-
-/* =========================================
-   CELULARES PEQUENOS
-========================================= */
-
 @media (max-width: 400px) {
+  .logo-crop {
+    width: 150px;
+    height: 58px;
+  }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
   }
 
   .hero .btn {
-    font-size: 0.82rem;
+    font-size: .82rem;
     padding: 12px 14px;
   }
 
@@ -1068,12 +1099,6 @@ footer a {
   }
 
   .extra-item h3 {
-    font-size: 0.78rem;
+    font-size: .78rem;
   }
-
- .logo-crop {
-  width: 185px;
-  height: 70px;
-}
-
 }
