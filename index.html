@@ -1,276 +1,960 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <title>VR Reservatórios</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FAVICON (na raiz) -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <title>VR Reservatórios | Limpeza, Reforma e Manutenção</title>
 
-  <body>
-    <!-- HEADER -->
-    <header>
-      <div class="container">
-        <div class="logo-container">
-          <img src="novalogo1.png" alt="VR Reservatórios" class="logo-crop" />
-        </div>
-        <div class="menu-toggle" id="menu-toggle">☰</div>
-        <nav>
-          <a href="#hero">Início</a>
-          <a href="#about">Sobre</a>
-          <a href="#services">Serviços</a>
-          <a href="#jobs">Nossos Trabalhos</a>
-          <a href="#cta" class="btn">Solicitar orçamento</a>
+  <meta name="description" content="A VR Reservatórios oferece serviços de limpeza, higienização, reforma e manutenção de reservatórios de água em Indaiatuba e região. Solicite seu orçamento!">
 
-          <a
-            href="https://www.instagram.com/vr.reservatorios?igsh=dnVnazVpam95dWRs"
-            target="_blank"
-            class="instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61560748617655"
-            target="_blank"
-            class="facebook-btn"
-          >
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </nav>
+  <meta name="theme-color" content="#062653">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =================================
+       CABEÇALHO
+  ================================== -->
+
+  <header>
+    <div class="container">
+
+      <div class="logo-container">
+        <a href="#hero" aria-label="Página inicial VR Reservatórios">
+          <img src="novalogo1.png" alt="VR Reservatórios" class="logo-crop">
+        </a>
       </div>
-    </header>
 
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="container">
-        <h1>Reformas e Manutenção de Reservatórios</h1>
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-principal">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="menu-principal">
+
+        <a href="#hero">Início</a>
+        <a href="#about">Sobre nós</a>
+        <a href="#services">Serviços</a>
+        <a href="#jobs">Nossos trabalhos</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#cta" class="btn">Solicitar orçamento</a>
+
+        <a
+          href="https://www.instagram.com/vr.reservatorios?igsh=dnVnazVpam95dWRs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="instagram"
+          aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61560748617655"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="facebook-btn"
+          aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- =================================
+       BANNER PRINCIPAL
+  ================================== -->
+
+  <section class="hero" id="hero">
+
+    <div class="container">
+
+      <p class="hero-subtitle">
+        LIMPEZA • REFORMA • MANUTENÇÃO
+      </p>
+
+      <h1>
+        Seu reservatório bem cuidado, da limpeza ao reparo.
+      </h1>
+
+      <p>
+        Atendemos reservatórios metálicos, de polietileno,
+        fibra, inox e concreto em Indaiatuba e região.
+        Soluções profissionais para conservar seu reservatório
+        e cuidar da qualidade da água.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          href="https://wa.me/5519989869948?text=Olá!%20Gostaria%20de%20solicitar%20uma%20avaliação%20do%20meu%20reservatório."
+          class="btn whatsapp"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <i class="fab fa-whatsapp"></i>
+          Solicitar avaliação pelo WhatsApp
+
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       SOBRE A EMPRESA
+  ================================== -->
+
+  <section class="about" id="about">
+
+    <div class="container about-content">
+
+      <div class="about-img">
+        <img src="novalogo.png" alt="VR Reservatórios Serviços Gerais">
+      </div>
+
+      <div class="about-text">
+
+        <h2>Conheça a VR Reservatórios</h2>
+
         <p>
-          • Reforma e Impermeabilização • Limpeza de Reservatórios • Manutenção
-          Estrutural • Pintura Técnica
+          A VR Reservatórios Serviços Gerais é especializada
+          em limpeza, higienização, reforma e manutenção
+          de reservatórios de água.
         </p>
-        <div class="buttons">
-          <a href="#cta" class="btn">Solicitar orçamento</a>
-          <a
-            href="https://wa.me/5519989869948?text=Olá,%20gostaria%20de%20um%20orçamento"
-            class="btn whatsapp"
-            target="_blank"
-          >
-            WhatsApp
-          </a>
-        </div>
+
+        <p>
+          Atendemos condomínios, indústrias, empresas e
+          residências, oferecendo soluções para diferentes
+          tipos de reservatórios, sempre com atenção à
+          segurança, qualidade e conservação das estruturas.
+        </p>
+
+        <p>
+          Nosso compromisso é oferecer um atendimento
+          profissional, identificando as necessidades de
+          cada reservatório e indicando a melhor solução.
+        </p>
+
       </div>
-    </section>
 
-    <!-- SOBRE -->
-    <section class="about" id="about">
-      <div class="container about-content">
-        <div class="about-img">
-          <img src="novalogo.png" alt="VR Reservatórios" />
-        </div>
+    </div>
+  </section>
 
-        <div class="about-text">
-          <h2>Sobre a VR Reservatórios</h2>
+
+  <!-- =================================
+       NOSSOS SERVIÇOS
+  ================================== -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <h2>Conheça nossos serviços</h2>
+
+      <div class="grid">
+
+        <!-- SERVIÇO 1 -->
+
+        <div class="card">
+
+          <img src="limpeza.jpeg" alt="Limpeza de reservatórios">
+
+          <h3>
+            <i class="fas fa-tint"></i>
+            Limpeza e higienização
+          </h3>
+
           <p>
-            A VR Reservatórios Serviços Gerais é especializada em limpeza,
-            manutenção e reforma de reservatório de água. Atendemos condomínios,
-            indústrias, empresas e residências, garantindo segurança, higiene e
-            qualidade no armazenamento de água.
+            Remoção de resíduos e sujeiras, lavagem e
+            desinfecção de caixas d'água, reservatórios
+            e cisternas.
           </p>
+
+          <p>
+            <strong>Por que fazer?</strong>
+            O acúmulo de sujeira pode comprometer
+            a qualidade da água armazenada.
+          </p>
+
         </div>
-      </div>
-    </section>
 
-    <!-- SERVIÇOS -->
-    <section class="services" id="services">
-      <div class="container">
-        <h2>Nossos Serviços</h2>
-        <div class="grid">
-          <div class="card">
-            <img src="limpeza.jpeg" alt="Limpeza de caixas" />
-            <h3>Reforma metálica</h3>
-            <p>Reforma completa de estrutura</p>
-          </div>
 
-          <div class="card">
-            <img src="higienizacao.jpg" alt="Higienização" />
-            <h3>Higienização</h3>
-            <p>Processo completo de limpeza</p>
-          </div>
+        <!-- SERVIÇO 2 -->
 
-          <div class="card">
-            <img src="img/limpeza2.jpeg" alt="Manutenção" />
-            <h3>Limpeza</h3>
-            <p>Remoção completa de resíduos</p>
-          </div>
-          <div class="card">
-            <img src="img/cisterna.jpeg" alt="Cisterna" />
-            <h3>Cisterna</h3>
-            <p>Limpeza de cisternas</p>
-          </div>
+        <div class="card">
+
+          <img src="higienizacao.jpg" alt="Manutenção preventiva">
+
+          <h3>
+            <i class="fas fa-tools"></i>
+            Manutenção preventiva
+          </h3>
+
+          <p>
+            Inspeção de tampas, conexões, registros,
+            tubulações e condições gerais do reservatório.
+          </p>
+
+          <p>
+            <strong>Por que fazer?</strong>
+            Identificar desgastes e vazamentos ajuda
+            a evitar falhas e interrupções.
+          </p>
+
         </div>
-      </div>
-    </section>
-    <!-- TRABALHOS REALIZADOS-->
-    <section class="videos" id="jobs">
-      <div class="container">
-        <h2>Trabalhos Realizados</h2>
 
-        <div class="video-grid">
-          <div class="video-item">
-            <video autoplay muted loop playsinline>
-              <source src="hidrojateamento.mp4" type="video/mp4" />
-            </video>
-            <p>Hidrojateamento</p>
-          </div>
 
-          <div class="video-item">
-            <video autoplay muted loop playsinline>
-              <source src="jateamentointerno.mp4" type="video/mp4" />
-            </video>
-            <p>Jateamento Interno</p>
-          </div>
+        <!-- SERVIÇO 3 -->
 
-          <div class="video-item">
-            <video autoplay muted loop playsinline>
-              <source src="lixamento.mp4" type="video/mp4" />
-            </video>
-            <p>Lixamento</p>
-          </div>
+        <div class="card">
+
+          <img src="img/limpeza2.jpeg" alt="Reforma de reservatórios metálicos">
+
+          <h3>
+            <i class="fas fa-paint-roller"></i>
+            Reforma de reservatórios metálicos
+          </h3>
+
+          <p>
+            Avaliação da estrutura, preparação da superfície,
+            tratamento de corrosão e recuperação da pintura
+            conforme a necessidade.
+          </p>
+
+          <p>
+            <strong>Por que fazer?</strong>
+            A corrosão precisa de atenção para preservar
+            a estrutura e a conservação do reservatório.
+          </p>
+
         </div>
-      </div>
-    </section>
 
-    <!-- FORMULÁRIO -->
-    <section id="cta" class="cta">
-      <div class="container">
-        <h2>Solicite seu Orçamento</h2>
-        <form class="cta-form" id="form-orcamento">
-          <input type="text" name="nome" placeholder="Seu nome" required />
-          <input type="email" name="email" placeholder="Seu e-mail" required />
-          <input
-            type="tel"
-            name="telefone"
-            placeholder="Seu telefone"
-            required
-          />
-          <textarea
-            name="mensagem"
-            placeholder="Detalhes do serviço"
-            rows="4"
-            required
-          ></textarea>
-          <button type="submit" class="btn cta-whatsapp">
-            Enviar Orçamento
-          </button>
-        </form>
-      </div>
-    </section>
 
-    <!-- CONTATO -->
-    <section class="contact">
-      <div class="container">
-        <h2>Contato</h2>
-        <p>(19) 98986-9948</p>
-        <p>📍 Indaiatuba - SP</p>
+        <!-- SERVIÇO 4 -->
 
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1311.5102533042532!2d-47.19445461073613!3d-23.07616193841467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b4c7732de5db%3A0x139e822c26bdd3e8!2sR.%20Jo%C3%A3o%20Ifanger%20J%C3%BAnior%2C%20138%20-%20Jardim%20Itamaraca%2C%20Indaiatuba%20-%20SP%2C%2013335-640!5e1!3m2!1spt-BR!2sbr!4v1775039505717!5m2!1spt-BR!2sbr"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div class="card">
+
+          <img src="img/cisterna.jpeg" alt="Reparo de caixas e cisternas">
+
+          <h3>
+            <i class="fas fa-layer-group"></i>
+            Reparo de caixas de polietileno e fibra
+          </h3>
+
+          <p>
+            Avaliação de trincas, fissuras e vazamentos
+            para identificar a possibilidade e o método
+            adequado de reparo.
+          </p>
+
+          <p>
+            <strong>Por que fazer?</strong>
+            Um diagnóstico adequado indica quando
+            recuperar ou substituir a caixa.
+          </p>
+
         </div>
+
       </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2026 VR Reservatórios</p>
-    </footer>
+    </div>
+  </section>
 
-    <!-- EMAILJS -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      emailjs.init("lNcUdpxVcjJSyN3Yp");
 
-      const form = document.getElementById("form-orcamento");
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+  <!-- =================================
+       REPARO DE RESERVATÓRIOS
+  ================================== -->
 
-        emailjs.sendForm("service_8m346vv", "template_b4421ep", this).then(
-          () => {
-            alert("Orçamento enviado com sucesso!");
-            form.reset();
-          },
-          (err) => {
-            alert("Erro ao enviar: " + JSON.stringify(err));
-          },
-        );
-      });
-    </script>
+  <section class="repair" id="reparos">
 
-    <!-- HEADER TRANSPARENTE -->
-    <script>
-      const header = document.querySelector("header");
+    <div class="container">
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
+      <h2>
+        <i class="fas fa-wrench"></i>
+        Reparo de caixas de polietileno e fibra
+      </h2>
+
+      <p class="repair-description">
+        Avaliação de trincas e vazamentos para verificar
+        a possibilidade de recuperação do reservatório
+        quando o reparo é indicado.
+      </p>
+
+      <div class="repair-content">
+
+        <div class="repair-image">
+
+          <img
+            src="img/cisterna.jpeg"
+            alt="Reservatório de água para avaliação e reparo">
+
+        </div>
+
+        <div class="repair-text">
+
+          <h3>A importância do reparo</h3>
+
+          <p>
+            Trincas e vazamentos podem provocar desperdício
+            de água e prejudicar a utilização do reservatório.
+          </p>
+
+          <p>
+            Uma avaliação técnica permite verificar
+            as condições da caixa e identificar
+            a possibilidade de recuperação ou a
+            necessidade de substituição.
+          </p>
+
+          <h3>
+            <i class="fas fa-check-circle"></i>
+            A importância da prevenção
+          </h3>
+
+          <p>
+            Verificar a base de apoio, conexões e sinais
+            de desgaste ajuda a identificar problemas
+            antes que se agravem.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="repair-cta">
+
+        <a
+          href="https://wa.me/5519989869948?text=Olá!%20Gostaria%20de%20uma%20avaliação%20para%20reparo%20do%20meu%20reservatório."
+          class="btn whatsapp"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <i class="fab fa-whatsapp"></i>
+          Solicitar avaliação da minha caixa
+
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       MANUTENÇÃO PREVENTIVA
+  ================================== -->
+
+  <section class="prevention">
+
+    <div class="container prevention-content">
+
+      <div class="prevention-image">
+
+        <img src="limpeza.jpeg" alt="Serviços de manutenção de reservatórios">
+
+      </div>
+
+      <div class="prevention-text">
+
+        <h2>Prevenir é cuidar do abastecimento.</h2>
+
+        <p>
+          A manutenção acompanha as condições do
+          reservatório e permite planejar os cuidados
+          necessários antes que pequenos problemas
+          se agravem.
+        </p>
+
+        <ul>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Verificação de vazamentos
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Avaliação de corrosão e desgaste
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Inspeção de acessos e conexões
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Avaliação das condições estruturais
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       LIMPEZA PERIÓDICA
+  ================================== -->
+
+  <section class="cleaning-info">
+
+    <div class="container cleaning-content">
+
+      <div class="cleaning-icon">
+        <i class="fas fa-droplet"></i>
+      </div>
+
+      <div>
+
+        <h2>Quando foi a última limpeza da sua caixa?</h2>
+
+        <p>
+          A água armazenada exige cuidados. A limpeza
+          periódica ajuda a remover sedimentos e conservar
+          as condições de higiene do reservatório.
+        </p>
+
+        <p>
+          <strong>
+            Recomendamos programar a limpeza a cada 6 meses.
+          </strong>
+        </p>
+
+        <small>
+          A frequência deve considerar as condições de uso,
+          as características do reservatório e as orientações
+          sanitárias aplicáveis.
+        </small>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       SERVIÇOS COMPLEMENTARES
+  ================================== -->
+
+  <section class="extra-services">
+
+    <div class="container">
+
+      <h2>Também cuidamos de</h2>
+
+      <div class="extra-grid">
+
+        <div class="extra-item">
+          <i class="fas fa-water"></i>
+          <h3>Redes hidráulicas</h3>
+        </div>
+
+        <div class="extra-item">
+          <i class="fas fa-faucet"></i>
+          <h3>Registros e conexões</h3>
+        </div>
+
+        <div class="extra-item">
+          <i class="fas fa-filter"></i>
+          <h3>Instalação de filtros</h3>
+        </div>
+
+        <div class="extra-item">
+          <i class="fas fa-ladder"></i>
+          <h3>Escadas e acessos</h3>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       TRABALHOS REALIZADOS
+       VÍDEOS ORIGINAIS PRESERVADOS
+  ================================== -->
+
+  <section class="videos" id="jobs">
+
+    <div class="container">
+
+      <h2>Conheça alguns dos nossos trabalhos</h2>
+
+      <p>
+        Confira um pouco dos serviços realizados
+        pela equipe da VR Reservatórios.
+      </p>
+
+      <div class="video-grid">
+
+        <!-- VÍDEO 1 -->
+
+        <div class="video-item">
+
+          <video autoplay muted loop playsinline preload="metadata">
+
+            <source src="hidrojateamento.mp4" type="video/mp4">
+
+            Seu navegador não suporta vídeos.
+
+          </video>
+
+          <p>Hidrojateamento</p>
+
+        </div>
+
+
+        <!-- VÍDEO 2 -->
+
+        <div class="video-item">
+
+          <video autoplay muted loop playsinline preload="metadata">
+
+            <source src="jateamentointerno.mp4" type="video/mp4">
+
+            Seu navegador não suporta vídeos.
+
+          </video>
+
+          <p>Jateamento interno</p>
+
+        </div>
+
+
+        <!-- VÍDEO 3 -->
+
+        <div class="video-item">
+
+          <video autoplay muted loop playsinline preload="metadata">
+
+            <source src="lixamento.mp4" type="video/mp4">
+
+            Seu navegador não suporta vídeos.
+
+          </video>
+
+          <p>Lixamento</p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       COMO FUNCIONA O ATENDIMENTO
+  ================================== -->
+
+  <section class="service-process" id="atendimento">
+
+    <div class="container">
+
+      <h2>Como funciona o atendimento</h2>
+
+      <div class="process-grid">
+
+        <div class="process-item">
+
+          <span>1</span>
+
+          <h3>Conte o que precisa</h3>
+
+          <p>
+            Informe a cidade, o material e a capacidade
+            do seu reservatório.
+          </p>
+
+        </div>
+
+        <div class="process-item">
+
+          <span>2</span>
+
+          <h3>Envie fotos</h3>
+
+          <p>
+            Para reformas e reparos, as imagens ajudam
+            na avaliação inicial.
+          </p>
+
+        </div>
+
+        <div class="process-item">
+
+          <span>3</span>
+
+          <h3>Receba a orientação</h3>
+
+          <p>
+            A VR avalia a necessidade do serviço
+            e prepara o orçamento.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="process-button">
+
+        <a
+          href="https://wa.me/5519989869948?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20serviços%20da%20VR%20Reservatórios."
+          class="btn whatsapp"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <i class="fab fa-whatsapp"></i>
+          Falar com a VR
+
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       FORMULÁRIO DE ORÇAMENTO
+  ================================== -->
+
+  <section id="cta" class="cta">
+
+    <div class="container">
+
+      <h2>Vamos cuidar do seu reservatório?</h2>
+
+      <p>
+        Solicite seu orçamento e receba uma orientação
+        sobre o serviço ideal para sua necessidade.
+      </p>
+
+      <form class="cta-form" id="form-orcamento">
+
+        <input
+          type="text"
+          name="nome"
+          placeholder="Seu nome"
+          autocomplete="name"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Seu e-mail"
+          autocomplete="email"
+          required
+        >
+
+        <input
+          type="tel"
+          name="telefone"
+          placeholder="Seu telefone / WhatsApp"
+          autocomplete="tel"
+          required
+        >
+
+        <textarea
+          name="mensagem"
+          placeholder="Conte um pouco sobre o serviço que precisa. Se possível, informe o tipo e a capacidade do reservatório."
+          rows="5"
+          required
+        ></textarea>
+
+        <button type="submit" class="btn cta-whatsapp">
+          <i class="fas fa-paper-plane"></i>
+          Enviar solicitação de orçamento
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       CONTATO E LOCALIZAÇÃO
+  ================================== -->
+
+  <section class="contact" id="contato">
+
+    <div class="container">
+
+      <h2>Entre em contato com a VR</h2>
+
+      <p>
+        <i class="fab fa-whatsapp"></i>
+        <strong>WhatsApp:</strong>
+        (19) 98986-9948
+      </p>
+
+      <p>
+        <i class="fas fa-map-marker-alt"></i>
+        <strong>Endereço:</strong>
+        R. João Ifanger Júnior, 138 -
+        Jardim Itamaraca, Indaiatuba - SP
+      </p>
+
+      <p>
+        <i class="fas fa-envelope"></i>
+        <strong>E-mail:</strong>
+        vrreservatorios@gmail.com
+      </p>
+
+      <p>
+        <i class="fas fa-globe"></i>
+        <strong>Site:</strong>
+        <a href="https://vrreservatorios.com.br/" target="_blank" rel="noopener noreferrer">
+          vrreservatorios.com.br
+        </a>
+      </p>
+
+      <p>
+        <i class="fas fa-map"></i>
+        Atendimento em Indaiatuba e região.
+      </p>
+
+      <div class="map">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1311.5102533042532!2d-47.19445461073613!3d-23.07616193841467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b4c7732de5db%3A0x139e822c26bdd3e8!2sR.%20Jo%C3%A3o%20Ifanger%20J%C3%BAnior%2C%20138%20-%20Jardim%20Itamaraca%2C%20Indaiatuba%20-%20SP%2C%2013335-640!5e1!3m2!1spt-BR!2sbr!4v1775039505717!5m2!1spt-BR!2sbr"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização da VR Reservatórios em Indaiatuba">
+        </iframe>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =================================
+       RODAPÉ
+  ================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <h2>VR Reservatórios</h2>
+
+      <p>
+        Cuidando da qualidade, conservação e segurança
+        dos seus reservatórios.
+      </p>
+
+      <p>
+        <a
+          href="https://wa.me/5519989869948"
+          target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i>
+          (19) 98986-9948
+        </a>
+
+        &nbsp; | &nbsp;
+
+        <i class="fas fa-map-marker-alt"></i>
+        Indaiatuba e região
+      </p>
+
+      <p>
+        © 2026 VR Reservatórios Serviços Gerais.
+        Todos os direitos reservados.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =================================
+       EMAILJS
+  ================================== -->
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script>
+
+    emailjs.init("lNcUdpxVcjJSyN3Yp");
+
+    const form = document.getElementById("form-orcamento");
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const button = form.querySelector("button");
+      button.disabled = true;
+      button.innerHTML = "Enviando solicitação...";
+
+      emailjs.sendForm(
+        "service_8m346vv",
+        "template_b4421ep",
+        this
+      ).then(
+
+        function() {
+
+          alert("Orçamento enviado com sucesso! Em breve entraremos em contato.");
+
+          form.reset();
+
+        },
+
+        function(error) {
+
+          console.error("Erro ao enviar formulário:", error);
+
+          alert("Não foi possível enviar sua solicitação. Tente novamente ou fale conosco pelo WhatsApp.");
+
         }
+
+      ).finally(function() {
+
+        button.disabled = false;
+
+        button.innerHTML =
+          '<i class="fas fa-paper-plane"></i> Enviar solicitação de orçamento';
+
       });
-    </script>
 
-    <!-- ANIMAÇÃO DOS CARDS -->
-    <script>
-      const cards = document.querySelectorAll(".card");
+    });
 
-      function showCards() {
-        const triggerBottom = window.innerHeight * 0.85;
+  </script>
 
-        cards.forEach((card) => {
-          const cardTop = card.getBoundingClientRect().top;
 
-          if (cardTop < triggerBottom) {
-            card.classList.add("show");
-          }
-        });
+  <!-- =================================
+       CABEÇALHO AO ROLAR A PÁGINA
+  ================================== -->
+
+  <script>
+
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function() {
+
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
       }
 
-      window.addEventListener("scroll", showCards);
-      window.addEventListener("load", showCards);
-    </script>
-    <script>
-      const toggle = document.getElementById("menu-toggle");
-      const nav = document.querySelector("nav");
+    });
 
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
+  </script>
 
-      // FECHAR MENU AO CLICAR
-      document.querySelectorAll("nav a").forEach((link) => {
-        link.addEventListener("click", () => {
-          nav.classList.remove("active");
+
+  <!-- =================================
+       ANIMAÇÃO DOS CARDS
+  ================================== -->
+
+  <script>
+
+    const cards = document.querySelectorAll(".card");
+
+    if ("IntersectionObserver" in window) {
+
+      const observer = new IntersectionObserver(function(entries) {
+
+        entries.forEach(function(entry) {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+            observer.unobserve(entry.target);
+
+          }
+
         });
+
+      }, {
+        threshold: 0.12
       });
-    </script>
-  </body>
+
+      cards.forEach(function(card) {
+        observer.observe(card);
+      });
+
+    } else {
+
+      cards.forEach(function(card) {
+        card.classList.add("show");
+      });
+
+    }
+
+  </script>
+
+
+  <!-- =================================
+       MENU MOBILE
+  ================================== -->
+
+  <script>
+
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("menu-principal");
+
+    toggle.addEventListener("click", function() {
+
+      const aberto = nav.classList.toggle("active");
+
+      toggle.setAttribute("aria-expanded", aberto);
+
+      toggle.innerHTML = aberto
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+
+    });
+
+    document.querySelectorAll("#menu-principal a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        nav.classList.remove("active");
+
+        toggle.setAttribute("aria-expanded", "false");
+
+        toggle.innerHTML = '<i class="fas fa-bars"></i>';
+
+      });
+
+    });
+
+  </script>
+
+</body>
 </html>
